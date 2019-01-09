@@ -8,7 +8,7 @@ This code has been forked from Savanihd repository - cause I found it interestin
 
 In this example we are outputing json_encoded data from codeigniters controllers calling the respective codeigniter model. In case you need to have a "fully" RESTful server implementation for you CodeIgniter core app using just one library, one config file and one controller you need to install the  [codeigniter-restserver](https://github.com/chriskacerguis/codeigniter-restserver) library from chriskacerguis. 
 
-In the code you will also see a basic codeigniters' routes set up, how to manage Angular.js route and controller, build the app Angular.js code, write your template files for your App and more....
+In the code you will also see a basic codeigniters' routes set up, how to manage Angular.js route and controller, build the applications' Angular.js code, write  template files for your app and more....
 
 ###################
 What is CodeIgniter
