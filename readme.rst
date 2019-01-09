@@ -1,5 +1,8 @@
+##################################################################
+Codeigniter and AngularJS CRUD with Search and Pagination Example.
+##################################################################
 
-As described above this is a short basic example code showing how to create a very simple crud, search and pagination module and easily use in your Codeigniter 3 project using Angular.js for the front-end part of the application.
+As described above this is a short, basic example code showing how to create a very simple one-page CRUD, search and pagination module and easily use in your Codeigniter 3 project using Angular.js for the front-end part of the application.
 
 This code has been forked from Savanihd repository - cause I found it interesting for my angular.js noob skills -  in order to extend it so it fits my needs, mainly for testing and learning purposes only. It is NOT something to use in production envriroments without the proper tweaks and improvements. 
 
