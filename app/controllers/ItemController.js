@@ -12,6 +12,11 @@ app.controller('ItemController', function(dataFactory,$scope,$http){
   $scope.totalItemsTemp = {};
 
   $scope.totalItems = 0;
+ 
+ //added for sorting 
+  $scope.orderByField = 'title'; // set the default sort type (column)
+  $scope.reverseSort = false;
+ 
   $scope.pageChanged = function(newPage) {
     getResultsPage(newPage);
   };
