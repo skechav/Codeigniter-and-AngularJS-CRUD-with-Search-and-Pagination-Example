@@ -1,8 +1,9 @@
-var app =  angular.module('main-App',['ngRoute']);
+var app =  angular.module( 'main-App', ['ngRoute'] );
 
 app.config(['$routeProvider','$locationProvider',
-    function($routeProvider, $locationProvider) {
-        $routeProvider.
+    function($routeProvider, $locationProvider) 
+    {
+        $routeProvider
             when('/', {
                 templateUrl: 'templates/home.html',
                 controller: 'HomeController'
@@ -15,6 +16,8 @@ app.config(['$routeProvider','$locationProvider',
                 redirectTo: '/'
             });
 
-    // use the HTML5 History API
-    $locationProvider.html5mode({ enabled: true, requireBase: false });
-}]);
+	    // use the HTML5 History API
+	    $locationProvider.html5mode({ enabled: true, requireBase: false });
+	}
+
+]);
