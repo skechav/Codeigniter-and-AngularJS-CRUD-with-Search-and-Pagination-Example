@@ -17,7 +17,7 @@ app.config(['$routeProvider','$locationProvider',
             });
 
 	    // use the HTML5 History API
-	   // $locationProvider.html5mode({ enabled: true, requireBase: false });
+	    $locationProvider.html5mode({ enabled: true, requireBase: false });
 	}
 
 ]);
