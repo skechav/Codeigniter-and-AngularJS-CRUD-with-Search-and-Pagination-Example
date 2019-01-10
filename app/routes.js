@@ -1,17 +1,20 @@
-var app =  angular.module('main-App',['ngRoute','angularUtils.directives.dirPagination']);
+var app =  angular.module('main-App',['ngRoute']);
 
-app.config(['$routeProvider',
-    function($routeProvider) 
-    {
+app.config(['$routeProvider','$locationProvider',
+    function($routeProvider, $locationProvider) {
         $routeProvider.
             when('/', {
                 templateUrl: 'templates/home.html',
-                controller: 'AdminController'
+                controller: 'HomeController'
             }).
-            when('/items', {
-                templateUrl: 'templates/items.html',
-                controller: 'ItemController'
+            when('/users', {
+                templateUrl: 'templates/users.html',
+                controller: 'UserController'
+            }).
+              otherwise({
+                redirectTo: '/'
             });
-         $locationProvider.html5Mode(true);
-    }
-]);
+
+    // use the HTML5 History API
+    $locationProvider.html5Mode(true);
+}]);
