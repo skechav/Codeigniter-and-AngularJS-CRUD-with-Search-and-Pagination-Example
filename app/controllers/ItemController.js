@@ -19,13 +19,13 @@ app.controller('ItemController', function(dataFactory,$scope,$http){
   getResultsPage(1);
   function getResultsPage(pageNumber) {
       if(! $.isEmptyObject($scope.libraryTemp)){
-          dataFactory.httpRequest('/items?search='+$scope.searchText+'&page='+pageNumber).then(function(data) {
+          dataFactory.httpRequest('items?search='+$scope.searchText+'&page='+pageNumber).then(function(data) {
             $scope.data = data.data;
             $scope.totalItems = data.total;
             $scope.pageNumber = pageNumber;
           });
       }else{
-        dataFactory.httpRequest('/items?page='+pageNumber).then(function(data) {
+        dataFactory.httpRequest('items?page='+pageNumber).then(function(data) {
           $scope.data = data.data;
           $scope.totalItems = data.total;
           $scope.pageNumber = pageNumber;
