@@ -18,15 +18,30 @@
 <table class="table table-bordered pagin-table">
     <thead>
         <tr>
-            <th>No</th>
-            <th>Title</th>
-            <th>Description</th>
+            <th>#</th>
+            <th width="80px">
+                    <a href="" ng-click="orderByField='id'; reverseSort = !reverseSort"> id 
+                    <span ng-show="orderByField == 'id'"><span ng-show="!reverseSort">^</span><span ng-show="reverseSort">v</span></span>
+                    </a> 
+                
+            </th>
+             <th width="80px"> 
+                    <a href="" ng-click="orderByField='title'; reverseSort = !reverseSort"> Title
+                    <span ng-show="orderByField == 'title'"><span ng-show="!reverseSort">^</span><span ng-show="reverseSort">v</span></span>
+                    </a> 
+            </th>
+            <th>
+                    <a href="" ng-click="orderByField='description'; reverseSort = !reverseSort"> Description
+                    <span ng-show="orderByField == 'description'"><span ng-show="!reverseSort">^</span><span ng-show="reverseSort">v</span></span>
+                    </a> 
+            </th>
             <th width="220px">Action</th>
         </tr>
     </thead>
     <tbody>
-        <tr dir-paginate="value in data | itemsPerPage:5" total-items="totalItems">
+        <tr dir-paginate="value in data | itemsPerPage:5 | orderBy:orderByField:reverseSort " total-items="totalItems">
             <td>{{ ((pageNumber- 1) * 5) + ($index + 1) }}</td>
+            <td>{{ value.id }}</td>
             <td>{{ value.title }}</td>
             <td>{{ value.description }}</td>
             <td>
@@ -35,8 +50,10 @@
             </td>
         </tr>
     </tbody>
-</table>
+</table> 
 <dir-pagination-controls class="pull-right" on-page-change="pageChanged(newPageNumber)" template-url="templates/dirPagination.html" ></dir-pagination-controls>
+<p >There are <strong> {{ totalItems }} </strong> records in total </p>
+
 
 <!-- Create Modal -->
 <div class="modal fade" id="create-user" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
