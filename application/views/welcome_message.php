@@ -21,6 +21,10 @@
 
 	<!-- App Controller -->
 	<script src="app/controllers/ItemController.js"></script>
+	
+	<style>
+		.modal-dialog, .modal-content{ z-index:1051; } 
+	</style>
 
 </head>
 <body ng-app="main-App">
