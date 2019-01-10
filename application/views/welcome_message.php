@@ -24,7 +24,7 @@
 	<style>
 		.modal-backdrop { z-index: 0 !important; }
 	</style>
-	<base href="/"> 
+	<!-- <base href="/"> -->
 </head>
 <body ng-app="main-App">
 	<nav class="navbar navbar-default">
